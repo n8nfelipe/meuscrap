@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scraping Elegante</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>URL Scraper</h1>
+      <p>Extraia informações de qualquer site instantaneamente.</p>
+    </header>
+
+    <main>
+      <form id="scrape-form">
+        <div class="input-group">
+          <input type="url" id="url-input" placeholder="https://exemplo.com" required autocomplete="off">
+          <button type="submit" id="submit-btn" title="Analisar URL">
+            <span class="btn-text">Analisar</span>
+            <div class="spinner" id="spinner"></div>
+          </button>
+        </div>
+      </form>
+
+      <div class="result-container" id="result-container">
+        <div class="result-header">
+          <h2>Resultado (JSON)</h2>
+          <button id="copy-btn" class="icon-btn" title="Copiar">📋 Copiar</button>
+        </div>
+        <pre><code id="json-output">// Os dados extraídos aparecerão aqui...</code></pre>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
